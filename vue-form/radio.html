@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>radio</title>
+    <script type="text/javascript" src="vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <input type="radio" value="one" name="picked" id="one" v-model="picked">
+        <label for="one">one</label><br>
+        <input type="radio" value="two" name="picked" id="two" v-model="picked">
+        <label for="two">two</label><br>
+        <span>picked: {{picked}}</span>
+    </div>
+    <script type="text/javascript">
+        Vue.config.debug = true;
+        var vm = new Vue({
+            el: "#app",
+            data: {
+                picked: ""
+            }
+        });
+    </script>
+</body>
+</html>

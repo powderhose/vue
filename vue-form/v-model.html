@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>v-model</title>
+    <script type="text/javascript" src="vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        input checkbox 双向绑定 demo<br/>
+        <input id="checkbox" type="checkbox" v-model = "check">
+        <label for="checkbox">{{check}}</label>
+    </div>
+    <script>
+        var vm = new Vue({
+            el: "#app",
+            data: {
+                check: true
+            }
+        });
+    </script>
+</body>
+</html>

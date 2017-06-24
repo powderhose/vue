@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>value-bind</title>
+    <script type="text/javascript" src="vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <!--input checkbox绑定的是一个字符串-->
+        <input type="checkbox" value="checkbox-xixi" v-model="check">
+        <!--toogle 是true或false-->
+        <input type="radio" v-model="pick" value="男">
+        <!--select 是一个字符串-->
+        <select name="" id="" v-model="select">
+            <option value="a">中国</option>
+            <option value="b">美国</option>
+            <option value="c">日本</option>
+        </select>
+        <br>
+        <span>{{$data}}</span>
+    </div>
+    <script type="text/javascript">
+        Vue.config.debug = true;
+        var vm = new Vue({
+            el: "#app",
+            data: {
+                check: "",
+                pick: "",
+                select: ""
+            }
+        });
+    </script>
+</body>
+</html>

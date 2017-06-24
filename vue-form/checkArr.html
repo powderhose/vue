@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>checkArr</title>
+    <script type="text/javascript" src="vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <input id="Mike" type="checkbox" value="Mike" v-model="checkArr">
+        <label for="Mike">Mike</label>
+        <input id="Jack" type="checkbox" value="Jack" v-model="checkArr">
+        <label for="Jack">Jack</label>
+        <input id="Lucy" type="checkbox" value="Lucy" v-model="checkArr">
+        <label for="Lucy">Lucy</label>
+        <span>checked names:{{checkArr}}</span>
+    </div>
+    <script type="text/javascript">
+        Vue.config.debug = true;
+        var vm = new Vue({
+            el: "#app",
+            data: {
+                checkArr: []
+            }
+        });
+    </script>
+</body>
+</html>

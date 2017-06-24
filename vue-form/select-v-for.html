@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>select-v-for</title>
+    <script type="text/javascript" src="vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <select name="" id="" v-model="select" >
+            <option v-bind:value="option.value" v-for="option in options">{{option.text}}</option>
+        </select>
+        <span>selceted:{{select}}</span>
+    </div>
+    <br>
+    <script type="text/javascript">
+        Vue.config.debug = true;
+        var Vm = new Vue({
+            el: "#app",
+            data: {
+                select: "c",
+                options: [{value: "a", text: "嘿嘿"},{value: "b", text: "哈哈"},{value:"c",text:"嘻嘻"}]
+            }
+        });
+    </script>
+</body>
+</html>

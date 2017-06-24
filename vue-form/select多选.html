@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>select多选</title>
+    <script type="text/javascript" src="vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        select多选绑定到一个数组：
+        <select name="" id="" v-model="select" multiple>
+            <option selected>
+                我是中国人！
+            </option>
+            <option>
+                我热爱中国！
+            </option>
+            <option>
+                好好生活，好好工作！
+            </option>
+        </select>
+        <br>
+        <span>selected:{{select}}</span>
+    </div>
+    <script type="text/javascript">
+        Vue.config.debug = true;
+        var vm = new Vue({
+            el: "#app",
+            data: {
+                select: ""
+            }
+        });
+    </script>
+</body>
+</html>
