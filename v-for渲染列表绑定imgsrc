@@ -1,0 +1,9 @@
+注意需要使用绑定v-bind:src="items.imgSrc"
+
+不能使用src="{{items.imgSrc}}}"
+
+否则会报错:
+
+- src="{{items.img}}": Interpolation inside attributes has been removed.
+ Use v-bind or the colon shorthand instead. For example, 
+ instead of <div id="{{ val }}">, use <div :id="val">.
