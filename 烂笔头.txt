@@ -1,0 +1,3 @@
+vue在绑定checkbox的时候会有多个checkbox，这个时候可以绑定一个数组，demo见checkArr.html。
+
+在view层展示model层的data的时候应该这样写：{{$data}}

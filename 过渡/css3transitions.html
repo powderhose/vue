@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>css3transitions</title>
+    <script type="text/javascript" src="vue.js"></script>
+    <style>
+        .expand-transition{
+            /*所有设定0.3s*/
+            transition: all .3s ease;
+            height: 30px;
+            padding: 10px;
+            background-color: #eee;
+            overflow: hidden;
+        }
+        .expand-enter,.expand-leave{
+            height: 0;
+            padding: 0 10px;
+            /*透明度*/
+            opacity: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <div v-if="show" transition="expand">
+            hello
+        </div>
+        <!--摁一下，触发过渡效果-->
+        <button @click="show=!show">show: {{show}}</button>
+    </div>
+    <script type="text/javascript">
+        var vm = new Vue({
+           el: "#app",
+            data: {
+                show: true
+            }
+        });
+    </script>
+</body>
+</html>

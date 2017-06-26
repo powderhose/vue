@@ -1,0 +1,17 @@
+后端vue-resource ajax通信
+
+前端vue-router
+
+第三方js库better-scroll
+
+最大程度组件化
+
+html5的localstorage
+
+图标字体的使用
+
+移动端1像素边框
+
+css sticky footer布局
+
+flex弹性布局

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>传递数值</title>
+    <script type="text/javascript" src="../vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <!--传递的是一个字符串-->
+        <child msg="198"></child>
+        <!--传递的是一个数字-->
+        <child :msg="198"></child>
+        <!--传递的是一个数字-->
+        <child v-bind:msg="198"></child>
+    </div>
+    <script type="text/javascript">
+        Vue.config.debug = true;
+        Vue.component('child', {
+            props: ['msg'],
+            template: '<span>{{msg + 198}}</span>'
+        });
+        var vm = new Vue({
+            el: "#app"
+        })
+    </script>
+</body>
+</html>

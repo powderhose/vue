@@ -1,0 +1,31 @@
+使用Props传递数据
+
+组件实例的作用域是孤立的。这意味这不能且不应该在子组件的模板内直接引用父组件的
+
+数据。可以使用props把数据传给子组件。
+
+"props"是组件数据的一个字段，期望从父组件传下来。子组件需要显示地用props选项。
+
+声明props：
+
+Vue.component('child', {
+    //声明props
+    props: ['msg'],
+    //prop可以在模板内
+    //可以用‘this.msg'设置
+    template：’<span>{{msg}}</span>’
+})_
+
+向它传入一个普通字符串：
+
+<child msg="hello!"></child>
+
+/*zlb*/
+
+组件的名字用于查找和替换view层的html，template其实就是替换view层中的模板显示，props就是通过组件把值传给模板。
+
+定义组件名为child，渲染的时候，到view层查找child组件标签，因为组件的模板有数据，所以把数据绑定在props上，现在组件中声明，
+
+渲染的时候，直接把数据在组件上绑定，这样就能传给模板并渲染出结果。
+
+props就是组件和模板在view层起到传递数据的作用。

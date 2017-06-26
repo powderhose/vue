@@ -1,0 +1,11 @@
+HTML特性不区分大小写。名字形式为cameCase的prop用作特性时，需要转化为kebab-case
+（短横线隔开）
+
+Vue.component('child',{
+    //camelCase in Javascript
+    props: ["myMessage"],
+    template: "<span>{{myMessage}}</span>"
+)}
+
+<!--kebab-case in HTML-->
+<child my-message="hello!"></child>

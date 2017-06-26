@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>css3animaitoned</title>
+    <script type="text/javascript" src="vue.js"></script>
+    <style>
+        .div-box{
+            margin: 25px;
+            width: 550px;
+            height: 100px;
+            background-color: orange;
+            font-size: 20px;
+            position: relative;
+        }
+        @-webkit-keyframes move{
+            from{
+                top: 0px;
+            }
+            to{
+                top: 200px;
+            }
+        }
+        @keyframes move{
+            from{
+                top: 0px;
+            }
+            to{
+                top: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <p>（此事例，未使用vue.js，目的了解css3animationde的使用</p>
+    <br>该实例使用了addEventListener()方法为DIV元素添加
+    <br>"animationstart","animationiteration"和"animationed"事件。
+    <br>并使用onclick事件，触发动画
+    <div id="div-box" class="div-box" onclick="fn()">
+        点我开始动画
+    </div>
+    <script type="text/javascript">
+        var box = document.getElementById('div-box');
+        //使用javascript开始动画
+        function fn(){
+            box.style.WebkitAnimation = "move 4s 2";
+        }
+        box.addEventListener("webkitAnimationStart", start);
+        box.addEventListener("webkitAnimationIteration", iteration);
+        box.addEventListener("webkitAnimationEnd", end);
+
+        box.addEventListener("animationstart", start);
+        box.addEventListener("animationiteration", iteration);
+        box.addEventListener("animationend", end);
+
+        function start(){
+            this.innerHTML = "animationstart 事件触发-动画开始播放";
+            this.style.backgroundColor = "pink";
+        }
+
+        function iteration(){
+            this.innerHTML = "animationiteration 事件触发-动画重新播放";
+        }
+
+        function end(){
+            this.innerHTML = "animationend 事件触发-动画重新播放";
+            this.style.backgroundColor = "blue";
+        }
+    </script>
+</body>
+</html>
